@@ -1,0 +1,410 @@
+/* ==========================================================================
+   DAY 2: INITIAL RESETS & CORE CSS BOX MODEL SETUP
+   ========================================================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box; /* Ensures padding/borders don't distort defined widths */
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #0056b3; /* Premium crisp blue accent color */
+    --primary-hover: #003d82;
+    --text-main: #2b2d42;
+    --text-muted: #6c757d;
+    --bg-light: #f8f9fa;
+    --bg-white: #ffffff;
+    --border-color: #dee2e6;
+    --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif; /* Custom Web Font Integration */
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+body {
+    background-color: var(--bg-white);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+.bg-light {
+    background-color: var(--bg-light);
+}
+
+.section__title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+/* Common Button Rules */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.75rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: var(--transition-smooth);
+    cursor: pointer;
+    border: none;
+}
+
+.btn--primary {
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+}
+
+.btn--primary:hover {
+    background-color: var(--primary-hover);
+}
+
+/* ==========================================================================
+   DAY 5: STICKY NAVIGATION BAR
+   ========================================================================== */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid var(--border-color);
+    backdrop-filter: blur(5px);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.nav__logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 500;
+    transition: var(--transition-smooth);
+}
+
+.nav__link:hover {
+    color: var(--primary-color);
+}
+
+/* ==========================================================================
+   DAY 5: HERO SECTION (WITH CSS GRADIENT BACKGROUND)
+   ========================================================================== */
+.hero {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+    padding: 7rem 0;
+    text-align: center;
+}
+
+.hero__title {
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1a1c23;
+}
+
+.hero__subtitle {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ==========================================================================
+   DAY 5: ABOUT ME LAYOUT (FLEXBOX / GRID DUAL SETUP)
+   ========================================================================== */
+.about__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.about__bio p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.about__quick-facts {
+    background-color: var(--bg-light);
+    padding: 1.5rem;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 4px;
+}
+
+.about__quick-facts h3 {
+    margin-bottom: 0.75rem;
+}
+
+.about__quick-facts ul {
+    list-style: none;
+}
+
+.about__quick-facts li {
+    margin-bottom: 0.5rem;
+}
+
+/* ==========================================================================
+   DAY 1: DATA TABLES & RESUME LAYOUTS
+   ========================================================================== */
+.table-container {
+    overflow-x: auto;
+}
+
+.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--bg-white);
+    margin-top: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.skills-table th, 
+.skills-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.skills-table th {
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+}
+
+/* ==========================================================================
+   DAY 3 & DAY 4: HOLY GRAIL LAYOUT (CSS GRID) & FLEXBOX GALLERY
+   ========================================================================== */
+.holy-grail {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile First: Single vertical column */
+    gap: 10px;
+    background-color: var(--border-color);
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 2rem;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+}
+
+.holy-grail > * {
+    padding: 1.5rem;
+    border-radius: 4px;
+}
+
+.hg-header { background-color: #343a40; }
+.hg-sidebar--left { background-color: #495057; }
+.hg-main { background-color: #6c757d; color: #fff; text-align: left; }
+.hg-main h3 { margin-bottom: 0.5rem; }
+.hg-sidebar--right { background-color: #495057; }
+.hg-footer { background-color: #343a40; }
+
+/* 1-Dimensional Flexbox gallery inside Holy Grail Main content container */
+.flex-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 1.5rem;
+}
+
+.gallery-card {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px dashed white;
+    padding: 1rem;
+    text-align: center;
+    flex: 1;
+}
+
+/* ==========================================================================
+   DAY 5: PROJECTS SECTION WITH FIXED 4-COLUMN ROW
+   ========================================================================== */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Stack vertically on small viewport entries */
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: var(--bg-white);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
+    transition: var(--transition-smooth);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-card__image {
+    background: linear-gradient(45deg, var(--primary-color), #007bff);
+    color: white;
+    padding: 3rem 1rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.project-card__content {
+    padding: 1.5rem;
+}
+
+.project-card__title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-card__text {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   DAY 1 & DAY 5: INTERACTIVE CONTACT FORM WITH INTERACTIVE STATES (:focus)
+   ========================================================================== */
+.form-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--bg-light);
+    padding: 2.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-white);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition-smooth);
+}
+
+/* Day 2 Focus Pseudo-class validation rule assignment */
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.15);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btn--submit {
+    background-color: var(--text-main);
+    color: var(--bg-white);
+    width: 100%;
+    font-weight: 600;
+}
+
+.btn--submit:hover {
+    background-color: var(--primary-color);
+}
+
+.main-footer {
+    background-color: var(--text-main);
+    color: #a0aec0;
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   DAY 4: MOBILE-FIRST RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+
+/* Tablet Viewports (min-width: 768px) */
+@media screen and (min-width: 768px) {
+    .about__grid {
+        grid-template-columns: 2fr 1fr; /* Side-by-side Layout options enabled */
+    }
+
+    .holy-grail {
+        grid-template-columns: 200px 1fr; /* Transition multi-columns */
+    }
+    
+    .hg-header { grid-column: span 2; }
+    .hg-sidebar--left { grid-column: span 1; }
+    .hg-main { grid-column: span 1; }
+    .hg-sidebar--right { grid-column: span 2; } /* Shifts positions fluidly */
+    .hg-footer { grid-column: span 2; }
+
+    .flex-gallery {
+        flex-direction: row; /* Transform to a 1D Row layout row grid */
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 Columns on Tablet */
+    }
+}
+
+/* Desktop Viewports (min-width: 1024px) */
+@media screen and (min-width: 1024px) {
+    .hero__title {
+        font-size: 3.5rem;
+    }
+
+    /* Holy Grail True Structure Alignment configuration */
+    .holy-grail {
+        grid-template-columns: 220px 1fr 220px;
+    }
+    .hg-header { grid-column: span 3; }
+    .hg-sidebar--left { grid-column: span 1; }
+    .hg-main { grid-column: span 1; }
+    .hg-sidebar--right { grid-column: span 1; }
+    .hg-footer { grid-column: span 3; }
+
+    /* Fixed Clean 4-Column Layout execution preventing dangling wrapped elements */
+    .portfolio-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

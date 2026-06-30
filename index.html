@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habiba Asif | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">HA.</a>
+            <ul class="nav__list">
+                <li><a href="#about" class="nav__link">About</a></li>
+                <li><a href="#skills" class="nav__link">Skills</a></li>
+                <li><a href="#layout" class="nav__link">Grid Layout</a></li>
+                <li><a href="#projects" class="nav__link">Projects</a></li>
+                <li><a href="#contact" class="nav__link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero__content container">
+                <h1 class="hero__title">Software Engineer & Full-Stack Developer</h1>
+                <p class="hero__subtitle">Building sustainable, high-performance web and mobile applications.</p>
+                <a href="#projects" class="btn btn--primary">View My Work</a>
+            </div>
+        </section>
+
+        <section id="about" class="about section container">
+            <h2 class="section__title">About Me</h2>
+            <div class="about__grid">
+                <article class="about__bio">
+                    <p>I am a Software Engineering student deeply involved in building responsive frontend user interfaces, robust backend architectures using the MERN stack, and native/cross-platform mobile applications.</p>
+                    <p>My work prioritizes clean code, scalable architecture principles, and exceptional UI/UX execution.</p>
+                </article>
+                <aside class="about__quick-facts">
+                    <h3>Quick Info</h3>
+                    <ul>
+                        <li><strong>Current Focus:</strong> MERN Stack & Flutter</li>
+                        <li><strong>Aesthetic:</strong> Professional UI with tailored accents</li>
+                        <li><strong>Availability:</strong> Open to internships and collaborations</li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <section id="skills" class="skills section bg-light">
+            <div class="container">
+                <h2 class="section__title">Education & Technical Expertise</h2>
+                <div class="table-container">
+                    <table class="skills-table">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Domain / Degree</th>
+                                <th>Core Stack / Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Education</strong></td>
+                                <td>B.S. Software Engineering</td>
+                                <td>Focused on Software Architecture & SDLC Automation</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Web Dev</strong></td>
+                                <td>MERN Stack</td>
+                                <td>MongoDB, Express.js, React, Node.js</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mobile Dev</strong></td>
+                                <td>Android & Flutter</td>
+                                <td>Java for native Android, Cross-platform Flutter Apps</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="layout" class="layout-demo section container">
+            <h2 class="section__title">CSS Grid "Holy Grail" & Flexbox Gallery Demo</h2>
+            <p class="section__subtitle">A modern, fully responsive multi-column layout demonstration.</p>
+            
+            <div class="holy-grail">
+                <header class="hg-header">HG Header</header>
+                <aside class="hg-sidebar hg-sidebar--left">Left Sidebar (Navigation/Filters)</aside>
+                <main class="hg-main">
+                    <h3>Main Content Area</h3>
+                    <p>Below is a 1-dimensional Flexbox-powered image card container gallery.</p>
+                    <div class="flex-gallery">
+                        <div class="gallery-card">Card 1</div>
+                        <div class="gallery-card">Card 2</div>
+                        <div class="gallery-card">Card 3</div>
+                    </div>
+                </main>
+                <aside class="hg-sidebar hg-sidebar--right">Right Sidebar (Widgets/Ads)</aside>
+                <footer class="hg-footer">HG Footer</footer>
+            </div>
+        </section>
+
+        <section id="projects" class="projects section bg-light">
+            <div class="container">
+                <h2 class="section__title">Featured Projects</h2>
+                <div class="portfolio-grid">
+                    <article class="project-card">
+                        <div class="project-card__image">MERN Stack</div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Task Management Platform</h3>
+                            <p class="project-card__text">A comprehensive MERN-stack to-do list featuring task priority matrices and full calendar synchronization.</p>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card__image">Mobile App</div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Portfolio App V2</h3>
+                            <p class="project-card__text">A native Android application written in Java featuring dynamic project categorizations and theme engines.</p>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card__image">Python AI</div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Smart Thermostat Simulation</h3>
+                            <p class="project-card__text">An AI implementation testing 5 distinct agent types (Reflex, Model, Goal, Utility, and Learning).</p>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card__image">Web UI</div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">GreenArch Analytics Dashboard</h3>
+                            <p class="project-card__text">An interactive validation UI measuring metrics and evaluation tool support for software sustainability.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact section container">
+            <h2 class="section__title">Get In Touch</h2>
+            <div class="form-wrapper">
+                <form class="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="name@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input type="text" id="subject" name="subject" class="form-input" placeholder="Project Inquiry" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" name="message" class="form-input form-textarea" placeholder="Tell me about your project scope..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container main-footer__content">
+            <p>&copy; 2026 Habiba Asif. Built with semantic HTML5 & BEM CSS architecture.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
